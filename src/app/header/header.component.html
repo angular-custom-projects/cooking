@@ -1,0 +1,19 @@
+<div class="header-container">
+    <div class="container input-filters" fxLayout="row wrap" fxLayoutAlign="flex-start center">
+        <input fxFlex="30%"
+               type="text"
+               placeholder="search..."
+               name="search"
+               [(ngModel)]="searchTerm"
+               (keyup)="test()">
+        <span class="flex-spacer"></span>
+        <div fxLayout="row" fxLayoutAlign.xs="center center">
+            <p>Order By</p>
+            <div fxLayout="row" fxLayout.xs="row wrap" fxLayoutAlign.xs="center center">
+                <button [ngClass]="{'active': newest}" (click)="onNewest()">Newest first</button>
+                <button [ngClass]="{'active': oldest}" (click)="onOldest()">Oldest first</button>
+                <button [ngClass]="{'active': rating}" (click)="onRating()">Rating</button>
+            </div>
+        </div>
+    </div>
+</div>

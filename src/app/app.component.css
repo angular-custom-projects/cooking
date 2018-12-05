@@ -1,0 +1,49 @@
+main {
+  min-height: calc(50vh - 70px); }
+
+.img-container {
+  position: relative; }
+
+/* Top left text */
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px; }
+
+/* Top right text */
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px; }
+
+.full-width {
+  width: 100%; }
+
+.likes-container {
+  background-color: #fff;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  padding: 3px; }
+
+.likes-container fa {
+  margin-right: 3px; }
+
+.tag {
+  padding: 1px 3px;
+  margin-right: 3px;
+  color: #fff;
+  background-color: #9e9e9e;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px; }
+
+@media (max-width: 767px) and (min-width: 600px) {
+  .single-video-container {
+    flex: 1 1 48% !important;
+    max-width: 48% !important; } }
+@media (max-width: 599px) {
+  main {
+    width: 97%; } }
+
+/*# sourceMappingURL=app.component.css.map */

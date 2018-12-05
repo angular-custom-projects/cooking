@@ -1,0 +1,30 @@
+@import "./variables";
+
+//disabled button
+@mixin disabled-button($background-color: rgba(0, 0, 0, .12), $color: rgba(0,0,0,.26)) {
+  background-color: $background-color;
+  color: $color;
+  cursor: not-allowed;
+}
+
+//dark hover mixin -> it has the orange background hover by default. you can change it if you like
+@mixin hover-color-dark($color: $white-color, $background-color: $orange-color, $c-value: 0%, $bg-value: 5%) {
+  color: darken($color, $c-value);
+  background-color: darken($background-color, $bg-value);
+  border: 1px solid $background-color;
+}
+
+//light hover mixin -> it has the orange background hover by default. you can change it if you like
+@mixin hover-color-light($color: $white-color, $background-color: $orange-color, $c-value: 0%, $bg-value: 5%) {
+  color: lighten($color, $c-value);
+  background-color: lighten($background-color, $bg-value);
+  border: 1px solid $background-color;
+}
+
+
+//border radius
+@mixin rounded($radius: 3px) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}

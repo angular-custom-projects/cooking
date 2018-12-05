@@ -1,0 +1,78 @@
+@import "../scss-partials/mixins";
+@import "../scss-partials/variables";
+
+.header-container {
+  background-color: $blue-color;
+}
+
+.container {
+  padding: 8px 16px 8px 5px;
+}
+
+button {
+  margin-left: 1%;
+  color: $white-color;
+  background-color: $orange-color;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  border: 1px solid $orange-color;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  outline: none;
+}
+
+button:hover {
+  cursor: pointer;
+  @include hover-color-dark();
+}
+
+.active {
+  background-color: $brown-color;
+  border: 1px solid $brown-color;
+}
+
+.active:hover {
+  cursor: unset;
+  @include hover-color-dark($background-color: $brown-color,  $bg-value: 0%);
+}
+
+p {
+  color: $black-color;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  padding: .375rem .75rem;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+input {
+  padding: 3px 10px;
+}
+
+@media (max-width: 767px) {
+  .input-filters {
+    flex-direction: column !important;
+  }
+  input {
+    margin-bottom: 10px;
+    max-width: 60% !important;
+    width: 60% !important;
+    flex: 1 1 60% !important;
+  }
+}
+
+@media (max-width: 599px) {
+  button {
+    margin-bottom: 10px;
+  }
+
+  input {
+    margin-top: 10px;
+  }
+}
