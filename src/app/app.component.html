@@ -2,30 +2,33 @@
     <app-header></app-header>
 </header>
 <main class="container">
-    <div fxLayout="row wrap" fxLayoutAlign="space-between center" fxLayoutAlign.xs="center center">
-        <div class="single-video-container" fxFlex="32%" fxFlex.xs="90%" *ngFor="let video of allData | videoFilter:term">
-            <h3>{{video.title}}</h3>
-            <div class="img-container">
-                <img src="{{video.thumbnail_url}}"
-                     alt="{{video.title}}"
-                     class="full-width">
-                <div class="top-right likes-container">
-                    <div *ngIf="video.rating" fxLayout="row">
-                        <fa name="thumbs-up"></fa>
-                        <span>{{video.rating}}</span>
-                    </div>
-                    <div *ngIf="!video.rating" fxLayout="row">
-                        <fa name="thumbs-up"></fa>
-                        <span>xxx</span>
+    <div class="main-content">
+        <div fxLayout="row wrap" fxLayoutAlign="space-between center" fxLayoutAlign.xs="center center">
+            <div class="single-video-container" fxFlex="32%" fxFlex.xs="90%"
+                 *ngFor="let video of allData | videoFilter:term">
+                <h3>{{video.title}}</h3>
+                <div class="img-container">
+                    <img src="{{video.thumbnail_url}}"
+                         alt="{{video.title}}"
+                         class="full-width">
+                    <div class="top-right likes-container">
+                        <div *ngIf="video.rating" fxLayout="row">
+                            <fa name="thumbs-up"></fa>
+                            <span>{{video.rating}}</span>
+                        </div>
+                        <div *ngIf="!video.rating" fxLayout="row">
+                            <fa name="thumbs-up"></fa>
+                            <span>xxx</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div fxLayout="row">
-                <div fxLayout="row" *ngFor="let tag of video.tags">
-                    <span class="tag">{{tag}}</span>
+                <div fxLayout="row">
+                    <div fxLayout="row" *ngFor="let tag of video.tags">
+                        <span class="tag">{{tag}}</span>
+                    </div>
+                    <span class="flex-spacer"></span>
+                    <div>{{video.posttime | date:"dd-MM-yyyy HH:mm"}}</div>
                 </div>
-                <span class="flex-spacer"></span>
-                <div>{{video.posttime | date:"dd-MM-yyyy HH:mm"}}</div>
             </div>
         </div>
     </div>
